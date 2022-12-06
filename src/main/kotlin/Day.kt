@@ -12,10 +12,10 @@ interface Day {
 
     fun resolvePuzzle(star: Star): Int {
         loadData(star)
-        if (star == Star.FIRST_STAR) {
-            return resolveFirstStar()
+        return if (star == Star.FIRST_STAR) {
+            resolveFirstStar()
         } else {
-            return resolveSecondStar()
+            resolveSecondStar()
         }
     }
 
